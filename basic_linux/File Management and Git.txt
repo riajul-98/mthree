@@ -1,0 +1,501 @@
+ubuntu@ip-172-31-13-24:~$ mkdir riajul
+
+ubuntu@ip-172-31-13-24:~$ cd riajul/
+
+ubuntu@ip-172-31-13-24:~/riajul$ touch file
+
+ubuntu@ip-172-31-13-24:~/riajul$ mkdir myfolder
+
+ubuntu@ip-172-31-13-24:~/riajul$ mv file myfolder/
+
+ubuntu@ip-172-31-13-24:~/riajul$ cp -p myfolder/file file.bkp
+
+ubuntu@ip-172-31-13-24:~/riajul$ rm -rf myfolder
+
+ubuntu@ip-172-31-13-24:~/riajul$ cd ~
+
+ubuntu@ip-172-31-13-24:~$ git clone https://github.com/techmarathon/srerepo.git
+Cloning into 'srerepo'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 19 (delta 5), reused 4 (delta 0), pack-reused 0
+Receiving objects: 100% (19/19), 9.54 MiB | 17.66 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+ubuntu@ip-172-31-13-24:~$ cd srerepo/
+
+ubuntu@ip-172-31-13-24:~/srerepo$ ls
+'-git& Github.pptx'   README.md   filea   fileb   mynewfile  'pss-orderbook-deploy-main (1).zip'   wileytext   wileytexto1
+
+ubuntu@ip-172-31-13-24:~/srerepo$ sudo unzip pss-orderbook-deploy-main\ \(1\).zip
+Archive:  pss-orderbook-deploy-main (1).zip
+4c87e948ce5df7af92ba5de98aa20115eb4b00d8
+   creating: pss-orderbook-deploy-main/
+   creating: pss-orderbook-deploy-main/Dockerfiles/
+  inflating: pss-orderbook-deploy-main/Dockerfiles/Dockerfile_currencyAPI
+  inflating: pss-orderbook-deploy-main/Dockerfiles/Dockerfile_fastapi
+  inflating: pss-orderbook-deploy-main/Dockerfiles/Dockerfile_mysql
+  inflating: pss-orderbook-deploy-main/Dockerfiles/Dockerfile_nginx
+  inflating: pss-orderbook-deploy-main/Dockerfiles/Dockerfile_nginx_compose
+  inflating: pss-orderbook-deploy-main/Jenkinsfile
+  inflating: pss-orderbook-deploy-main/Jenkinsfile_Promote
+  inflating: pss-orderbook-deploy-main/README.md
+  inflating: pss-orderbook-deploy-main/compose.yaml
+   creating: pss-orderbook-deploy-main/src/
+   creating: pss-orderbook-deploy-main/src/currencyAPI/
+   creating: pss-orderbook-deploy-main/src/currencyAPI/app/
+ extracting: pss-orderbook-deploy-main/src/currencyAPI/app/__init__.py
+  inflating: pss-orderbook-deploy-main/src/currencyAPI/app/main.py
+ extracting: pss-orderbook-deploy-main/src/currencyAPI/requirements.txt
+   creating: pss-orderbook-deploy-main/src/deployment_imgpolicy_template/
+  inflating: pss-orderbook-deploy-main/src/deployment_imgpolicy_template/deployment-dev-template.yaml
+  inflating: pss-orderbook-deploy-main/src/deployment_imgpolicy_template/imgPolicy-dev-template.yaml
+  inflating: pss-orderbook-deploy-main/src/deployment_imgpolicy_template/service-dev-template.yaml
+   creating: pss-orderbook-deploy-main/src/fastapi/
+  inflating: pss-orderbook-deploy-main/src/fastapi/Dockerfile_fastapi
+   creating: pss-orderbook-deploy-main/src/fastapi/app/
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/PostClasses.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/Queries.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/SQLClasses.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/SQLsetup.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/Trade.py
+ extracting: pss-orderbook-deploy-main/src/fastapi/app/__init__.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/fix.4.4.decode.json
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/fix.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/log.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/main.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/refresh.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/session.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/setup.py
+  inflating: pss-orderbook-deploy-main/src/fastapi/app/utils.py
+   creating: pss-orderbook-deploy-main/src/fastapi/data/
+  inflating: pss-orderbook-deploy-main/src/fastapi/data/finacial-product-data.json
+  inflating: pss-orderbook-deploy-main/src/fastapi/debug.log
+  inflating: pss-orderbook-deploy-main/src/fastapi/error.log
+  inflating: pss-orderbook-deploy-main/src/fastapi/info.log
+  inflating: pss-orderbook-deploy-main/src/fastapi/requirements.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/AAL/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/AAL/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/AAPL/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/AAPL/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/AMZN/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/AMZN/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/AXP/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/AXP/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/BAC/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/BAC/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/BBY/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/BBY/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/BMO/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/BMO/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/BNS/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/BNS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/C/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/C/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/CMCSA/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/CMCSA/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/CSCO/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/CSCO/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/CVS/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/CVS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/CVX/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/CVX/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/DAL/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/DAL/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/DIS/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/DIS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/FB/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/FB/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/FDX/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/FDX/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/GOOG/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/GOOG/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/GS/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/GS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/HD/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/HD/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/IBM/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/IBM/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/INTC/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/INTC/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/JNJ/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/JNJ/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/JPM/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/JPM/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/KO/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/KO/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/LOW/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/LOW/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/LUV/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/LUV/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MCD/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/MCD/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MMM/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/MMM/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MOR/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MOR/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MRK/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MRK/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MS/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/MS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/MSFT/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/MSFT/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/NKE/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/NKE/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/NVDA/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/NVDA/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/ORCL/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/ORCL/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/PFE/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/PFE/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/PG/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/PG/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/PNC/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/PNC/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/PYPL/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/PYPL/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/RY/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/RY/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/T/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/T/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/TD/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/TD/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/TSLA/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/TSLA/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/TWX/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/TWX/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/UNH/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/UNH/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/UPS/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/UPS/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/USB/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/USB/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/VZ/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/VZ/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/WBA/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/WBA/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/WFC/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/WFC/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/WFC/error/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/WFC/error/flag.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/WMT/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/WMT/data.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity2/XOM/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity2/XOM/data.txt
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity2/stock_investments.txt
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity4/
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_23.csv.gz
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_24.csv.gz
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_25.csv.gz
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_26.csv.gz
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_27.csv.gz
+ extracting: pss-orderbook-deploy-main/src/linux_activities/Activity4/SpaceIssue/stock2022_09_28.csv.gz
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/log/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/log/Process_1.log
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/log/process_2.log
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/process_1.sh
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/process_2.sh
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity4/processes/process_3.sh
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity5/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity5/fix_session_2023_03_13.log
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity6/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity6/stock2022_09_28.csv
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity6/stock_sample.csv
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity7/
+   creating: pss-orderbook-deploy-main/src/linux_activities/Activity7/Solution/
+  inflating: pss-orderbook-deploy-main/src/linux_activities/Activity7/Solution/process_monitoring.sh
+  inflating: pss-orderbook-deploy-main/src/linux_activities/fixGenerator.sh
+   creating: pss-orderbook-deploy-main/src/mysql/
+  inflating: pss-orderbook-deploy-main/src/mysql/Dockerfile_mysql
+   creating: pss-orderbook-deploy-main/src/mysql/init/
+  inflating: pss-orderbook-deploy-main/src/mysql/init/exporter-setup.sql
+  inflating: pss-orderbook-deploy-main/src/mysql/init/finacial_products_table.sql
+  inflating: pss-orderbook-deploy-main/src/mysql/init/go_copy_db.sql
+   creating: pss-orderbook-deploy-main/src/nginx/
+  inflating: pss-orderbook-deploy-main/src/nginx/Dockerfile_nginx
+  inflating: pss-orderbook-deploy-main/src/nginx/default.conf
+   creating: pss-orderbook-deploy-main/src/nginx/html/
+  inflating: pss-orderbook-deploy-main/src/nginx/html/asset-manifest.json
+  inflating: pss-orderbook-deploy-main/src/nginx/html/favicon.ico
+  inflating: pss-orderbook-deploy-main/src/nginx/html/index.html
+  inflating: pss-orderbook-deploy-main/src/nginx/html/logo192.png
+  inflating: pss-orderbook-deploy-main/src/nginx/html/logo512.png
+  inflating: pss-orderbook-deploy-main/src/nginx/html/manifest.json
+  inflating: pss-orderbook-deploy-main/src/nginx/html/robots.txt
+   creating: pss-orderbook-deploy-main/src/nginx/html/static/
+   creating: pss-orderbook-deploy-main/src/nginx/html/static/css/
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/css/main.72749aff.css
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/css/main.72749aff.css.map
+   creating: pss-orderbook-deploy-main/src/nginx/html/static/js/
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/js/main.bd387cbf.js
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/js/main.bd387cbf.js.LICENSE.txt
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/js/main.bd387cbf.js.map
+   creating: pss-orderbook-deploy-main/src/nginx/html/static/media/
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/media/logo.1dfc6bb824c9ccc7d2d6e98939e86077.svg
+  inflating: pss-orderbook-deploy-main/src/nginx/html/static/media/wiley-edge-logo.jpg
+  inflating: pss-orderbook-deploy-main/src/nginx/setup-compose.sh
+  inflating: pss-orderbook-deploy-main/src/nginx/setup.sh
+   creating: pss-orderbook-deploy-main/src/node-volume/
+ extracting: pss-orderbook-deploy-main/src/node-volume/.gitkeep
+   creating: pss-orderbook-deploy-main/src/node-volume/code/
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/.gitignore
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/README.md
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/package-lock.json
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/package.json
+   creating: pss-orderbook-deploy-main/src/node-volume/code/public/
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/favicon.ico
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/index.html
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/logo192.png
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/logo512.png
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/manifest.json
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/public/robots.txt
+   creating: pss-orderbook-deploy-main/src/node-volume/code/src/
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/.App.js.swo
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/App.css
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/App.js
+   creating: pss-orderbook-deploy-main/src/node-volume/code/src/components/
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/.Manage.js.swo
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/.Orderbook.js.swo
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Holding.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/HoldingList.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Holdings.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/LoginForm.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Manage.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Navigation.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Navigation.module.css
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Order.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Order.module.css
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/OrderList.module.css
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Orderbook.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Orderlist.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Quotes.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Symbol.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/SymbolList.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/components/Trade.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/index.css
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/index.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/logo.svg
+   creating: pss-orderbook-deploy-main/src/node-volume/code/src/store/
+  inflating: pss-orderbook-deploy-main/src/node-volume/code/src/store/auth-context.js
+  inflating: pss-orderbook-deploy-main/src/node-volume/package-lock.json
+   creating: pss-orderbook-deploy-main/utils/
+  inflating: pss-orderbook-deploy-main/utils/multi-env-test-dev
+  inflating: pss-orderbook-deploy-main/utils/multi-env-test-prod
+  inflating: pss-orderbook-deploy-main/utils/pipeline_clean_ecr
+  inflating: pss-orderbook-deploy-main/utils/pipeline_multi_team_build
+  inflating: pss-orderbook-deploy-main/utils/pipeline_promote_multi_team
+
+ubuntu@ip-172-31-13-24:~/srerepo$ cd pss-orderbook-deploy-main/
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main$ cd src/linux_activities/Activity2/
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ cat stock_investments.txt
+Stock Ticker,Number of Shares,Purchase Price,Current Price
+AAPL,100,200,250
+GOOG,50,300,350
+MSFT,75,100,125
+AMZN,25,600,650
+FB,100,150,175
+TSLA,50,400,450
+INTC,75,75,87.5
+CSCO,25,200,225
+NVDA,100,300,350
+PYPL,50,250,275
+IBM,75,100,112.5
+ORCL,25,400,450
+MCD,100,150,162.5
+WMT,50,200,225
+XOM,75,100,112.5
+CVX,25,300,325
+PG,100,100,112.5
+KO,50,100,112.5
+JNJ,75,100,112.5
+PFE,25,100,112.5
+MRK,100,100,112.5
+UNH,50,100,112.5
+HD,75,100,112.5
+LOW,25,100,112.5
+MOR,100,100,112.5
+BBY,50,100,112.5
+DIS,75,100,112.5
+CMCSA,25,100,112.5
+TWX,100,100,112.5
+T,50,100,112.5
+VZ,75,100,112.5
+CVS,25,100,112.5
+WBA,100,100,112.5
+NKE,50,100,112.5
+MMM,75,100,112.5
+JPM,25,100,112.5
+BAC,100,100,112.5
+C,50,100,112.5
+GS,75,100,112.5
+MS,25,100,112.5
+WFC,100,100,112.5
+USB,50,100,112.5
+PNC,75,100,112.5
+BMO,25,100,112.5
+TD,100,100,112.5
+BNS,50,100,112.5
+RY,75,100,112.5
+AXP,25,100,112.5
+DAL,100,100,112.5
+LUV,50,100,112.5
+AAL,75,100,112.5
+DAL,25,100,112.5
+UPS,100,100,112.5
+FDX,50,100,112.5
+DAL,75,100,112.5
+AAL,25,100,112.5
+DAL,100,100,112.5
+LUV,50,100,112.5
+AAL,75,100,112.5
+DAL,25,100,112.5
+UPS,100,100,112.5
+FDX,50,100,112.5
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ head -5 stock_investments.txt
+Stock Ticker,Number of Shares,Purchase Price,Current Price
+AAPL,100,200,250
+GOOG,50,300,350
+MSFT,75,100,125
+AMZN,25,600,650
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ tail -5 stock_investments.txt
+LUV,50,100,112.5
+AAL,75,100,112.5
+DAL,25,100,112.5
+UPS,100,100,112.5
+FDX,50,100,112.5
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ grep GOOG stock_investments.txt | wc -l
+1
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ grep -wc T stock_investments.txt
+1
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ grep -lir spy .
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ grep -lvri spy .
+./BAC/data.txt
+./GS/data.txt
+./IBM/data.txt
+./JNJ/data.txt
+./FDX/data.txt
+./DIS/data.txt
+./HD/data.txt
+./MMM/data.txt
+./PG/data.txt
+./NKE/data.txt
+./CVS/data.txt
+./BBY/data.txt
+./MRK/data.txt
+./LUV/data.txt
+./CVX/data.txt
+./VZ/data.txt
+./WFC/data.txt
+./MCD/data.txt
+./ORCL/data.txt
+./FB/data.txt
+./GOOG/data.txt
+./stock_investments.txt
+./NVDA/data.txt
+./AAL/data.txt
+./WBA/data.txt
+./MOR/data.txt
+./BMO/data.txt
+./USB/data.txt
+./KO/data.txt
+./XOM/data.txt
+./TSLA/data.txt
+./TD/data.txt
+./C/data.txt
+./T/data.txt
+./CSCO/data.txt
+./BNS/data.txt
+./AXP/data.txt
+./MSFT/data.txt
+./RY/data.txt
+./AAPL/data.txt
+./MS/data.txt
+./CMCSA/data.txt
+./PFE/data.txt
+./DAL/data.txt
+./WMT/data.txt
+./INTC/data.txt
+./PNC/data.txt
+./UNH/data.txt
+./LOW/data.txt
+./JPM/data.txt
+./UPS/data.txt
+./AMZN/data.txt
+./PYPL/data.txt
+./TWX/data.txt
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ find . -type f -name *data*
+./BAC/data.txt
+./GS/data.txt
+./IBM/data.txt
+./JNJ/data.txt
+./FDX/data.txt
+./DIS/data.txt
+./HD/data.txt
+./MMM/data.txt
+./PG/data.txt
+./NKE/data.txt
+./CVS/data.txt
+./BBY/data.txt
+./MRK/data.txt
+./LUV/data.txt
+./CVX/data.txt
+./VZ/data.txt
+./WFC/data.txt
+./MCD/data.txt
+./ORCL/data.txt
+./FB/data.txt
+./GOOG/data.txt
+./NVDA/data.txt
+./AAL/data.txt
+./WBA/data.txt
+./MOR/data.txt
+./BMO/data.txt
+./USB/data.txt
+./KO/data.txt
+./XOM/data.txt
+./TSLA/data.txt
+./TD/data.txt
+./C/data.txt
+./T/data.txt
+./CSCO/data.txt
+./BNS/data.txt
+./AXP/data.txt
+./MSFT/data.txt
+./RY/data.txt
+./AAPL/data.txt
+./MS/data.txt
+./CMCSA/data.txt
+./PFE/data.txt
+./DAL/data.txt
+./WMT/data.txt
+./INTC/data.txt
+./PNC/data.txt
+./UNH/data.txt
+./LOW/data.txt
+./JPM/data.txt
+./UPS/data.txt
+./AMZN/data.txt
+./PYPL/data.txt
+./TWX/data.txt
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ find . -type d -name error
+./WFC/error
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ sudo find . -type f -name "*data*" -exec chmod 744 {} \;
+
+ubuntu@ip-172-31-13-24:~/srerepo/pss-orderbook-deploy-main/src/linux_activities/Activity2$ chmod -w WFC/data.txt
+chmod: changing permissions of 'WFC/data.txt': Operation not permitted

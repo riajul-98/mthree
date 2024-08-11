@@ -1,0 +1,14 @@
+1. pwd
+2. cd /var/log
+3. cd ..
+4. pwd
+5. ls -a
+6. ls -l
+7. ls -ltr
+8. cd /root
+9. cd
+10. cd ..
+11. ls --help
+12. cd /var
+13. ls -lsr
+14. cat /etc/*release*

@@ -1,0 +1,108 @@
+ubuntu@ip-172-31-13-24:~$ mkdir memory_report
+
+ubuntu@ip-172-31-13-24:~$ cd memory_report/
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du ~ -a | sort -k1,1nr > homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ less homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ sudo du / -a | sort -k1,1nr > allfiles_sorted.txt
+du: cannot access '/proc/163343/task/163343/fd/4': No such file or directory
+du: cannot access '/proc/163343/task/163343/fdinfo/4': No such file or directory
+du: cannot access '/proc/163343/fd/3': No such file or directory
+du: cannot access '/proc/163343/fdinfo/3': No such file or directory
+
+ubuntu@ip-172-31-13-24:~/memory_report$
+
+ubuntu@ip-172-31-13-24:~/memory_report$ less allfiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+28K     ./homefiles_sorted.txt
+12M     ./allfiles_sorted.txt
+12M     .
+
+ubuntu@ip-172-31-13-24:~/memory_report$ ls -la
+total 12228
+drwxrwxr-x 2 ubuntu ubuntu     4096 Aug 11 15:54 .
+drwxr-x--- 9 ubuntu ubuntu     4096 Aug 11 15:54 ..
+-rw-rw-r-- 1 ubuntu ubuntu 12484399 Aug 11 15:54 allfiles_sorted.txt
+-rw-rw-r-- 1 ubuntu ubuntu    28047 Aug 11 15:53 homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ df -h > filesystems.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ cat filesystems.txt
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  2.2G  4.6G  32% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  916K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M  133M  687M  17% /boot
+/dev/xvda15     105M  6.1M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
+
+ubuntu@ip-172-31-13-24:~/memory_report$ tar -cvf memory.tar *.txt
+allfiles_sorted.txt
+filesystems.txt
+homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ tar -tvf memory.tar
+-rw-rw-r-- ubuntu/ubuntu 12484399 2024-08-11 15:54 allfiles_sorted.txt
+-rw-rw-r-- ubuntu/ubuntu      372 2024-08-11 15:54 filesystems.txt
+-rw-rw-r-- ubuntu/ubuntu    28047 2024-08-11 15:53 homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ gzip memory.tar
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+28K     ./homefiles_sorted.txt
+12M     ./allfiles_sorted.txt
+4.0K    ./filesystems.txt
+1.2M    ./memory.tar.gz
+14M     .
+
+ubuntu@ip-172-31-13-24:~/memory_report$ rm *.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+1.2M    ./memory.tar.gz
+1.2M    .
+
+ubuntu@ip-172-31-13-24:~/memory_report$ gunzip memory.tar.gz
+
+ubuntu@ip-172-31-13-24:~/memory_report$ tar -xvf memory.tar
+allfiles_sorted.txt
+filesystems.txt
+homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+28K     ./homefiles_sorted.txt
+12M     ./allfiles_sorted.txt
+4.0K    ./filesystems.txt
+12M     ./memory.tar
+24M     .
+
+ubuntu@ip-172-31-13-24:~/memory_report$ tar -czvf memory.tar.gz *.txt
+allfiles_sorted.txt
+filesystems.txt
+homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+28K     ./homefiles_sorted.txt
+12M     ./allfiles_sorted.txt
+4.0K    ./filesystems.txt
+12M     ./memory.tar
+1.2M    ./memory.tar.gz
+26M     .
+
+ubuntu@ip-172-31-13-24:~/memory_report$ tar -xzvf memory.tar.gz
+allfiles_sorted.txt
+filesystems.txt
+homefiles_sorted.txt
+
+ubuntu@ip-172-31-13-24:~/memory_report$ du . -ha
+28K     ./homefiles_sorted.txt
+12M     ./allfiles_sorted.txt
+4.0K    ./filesystems.txt
+12M     ./memory.tar
+1.2M    ./memory.tar.gz
+26M     .
+
+ubuntu@ip-172-31-13-24:~/memory_report$

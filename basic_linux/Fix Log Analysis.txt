@@ -1,0 +1,104 @@
+ubuntu@ip-172-31-13-24:~$ ./fixGenerator.sh &
+[1] 161822
+
+ubuntu@ip-172-31-13-24:~$ mv fixlog20240811152235.log logs/
+
+ubuntu@ip-172-31-13-24:~$ cd logs/
+
+ubuntu@ip-172-31-13-24:~/logs$ sed 's/MTHREE/EDGE/g' fixlog20240811152235.log > fixlog2.log
+
+ubuntu@ip-172-31-13-24:~/logs$ grep -E '35=8.*' fixlog2.log > fills.log
+
+ubuntu@ip-172-31-13-24:~/logs$ grep '39=4' fixlog2.log > cancels.log
+
+ubuntu@ip-172-31-13-24:~/logs$ grep '39=1' fixlog20240811152235.log > partialFills.log
+
+ubuntu@ip-172-31-13-24:~/logs$ awk -F'; ' '
+{
+    symbol = ""; orderID = ""; side = ""; fillPrice = ""; fillQty = ""; executionID = "";
+    for (i = 1; i <= NF; i++) {
+        if ($i ~ /^55=/) symbol = substr($i, 3);
+        if ($i ~ /^11=/) orderID = substr($i, 3);
+        if ($i ~ /^54=/) side = substr($i, 3);
+        if ($i ~ /^31=/) fillPrice = substr($i, 3);
+        if ($i ~ /^32=/) fillQty = substr($i, 3);
+        if ($i ~ /^17=/) executionID = substr($i, 3);
+    }
+    print symbol, orderID, side, fillPrice, fillQty, executionID;
+}' partialFills.log > parsedPartialFills.log
+
+ubuntu@ip-172-31-13-24:~/logs$ diff cancels.log cancels2.log
+1c1
+< 8=FIX4.4; 35=8; 34=53; 49=MS; 56=EDGE; 52=2024-08-11-15:24:15; 151=10132; 55=AAPL; 11=C_algo20240811152415; 31=0; 150=4; 39=4; 54=1; 17=exec20240811152415; 32=0; 41=algo20240811152415; 38=20263; 60=2024-08-11-15:24:15; 6=0.0; 14=0; 37=algo20240811152415; 10=252;
+---
+> 8=FIX4.4; 35=8; 34=53; 49=MS; 56=EDGE; 52=2024-08-11-15:24:15; 151=10132; 55=AAAPL; 11=C_algo20240811152415; 31=0; 150=4; 39=4; 54=1; 17=exec20240811152415; 32=0; 41=algo20240811152415; 38=20263; 60=2024-08-11-15:24:15; 6=0.0; 14=0; 37=algo20240811152415; 10=252;
+
+
+
+
+
+
+ 179  cd srerepo/
+  180  ls
+  181  cd pss-orderbook-deploy-main/
+  182  ls
+  183  cd src/
+  184  ls
+  185  cd linux_activities/
+  186  ls
+  187  mv fixGenerator.sh /home/ubuntu/
+  188  cd linux_activities/
+  189  mv fixGenerator.sh /home/ubuntu/
+  190  chmod 777 fixGenerator.sh
+  191  sudo chmod 777 fixGenerator.sh
+  192  mv fixGenerator.sh /home/ubuntu/
+  193  sudo mv fixGenerator.sh /home/ubuntu/
+  194  cd
+  195  ls
+  196  clear
+  197  mkdir logs
+  198  ./fixGenerator.sh
+  199  ls
+  200  rm fixlof2*
+  201  rm fixlog2*
+  202  ls
+  203  ./fixGenerator.sh &
+  204  bg
+  205  jobs
+  206  mv fixlog20240811152235.log logs/
+  207  clear
+  208  cd logs/
+  209  ls
+  210  cat fixlog20240811152235.log
+  211  sed 's/MTHREE/EDGE/g' fixlog20240811152235.log > fixlog2.log
+  212  grep -E '35=8.*(150=F|39=2)' fixlog2.log > fills.log
+  213  cat fills.log
+  214  grep '39=4' logs/fixlog2.log > logs/cancels.log
+  215  grep '39=4' fixlog2.log > cancels.log
+  216  ls
+  217  grep '39=1' fixlog20240811152235.log > partialFills.log
+  218  awk -F'; ' '
+{
+    symbol = ""; orderID = ""; side = ""; fillPrice = ""; fillQty = ""; executionID = "";
+    for (i = 1; i <= NF; i++) {
+        if ($i ~ /^55=/) symbol = substr($i, 3);
+        if ($i ~ /^11=/) orderID = substr($i, 3);
+        if ($i ~ /^54=/) side = substr($i, 3);
+        if ($i ~ /^31=/) fillPrice = substr($i, 3);
+        if ($i ~ /^32=/) fillQty = substr($i, 3);
+        if ($i ~ /^17=/) executionID = substr($i, 3);
+    }
+    print symbol, orderID, side, fillPrice, fillQty, executionID;
+}' partialFills.log > parsedPartialFills.log
+  219  cat parsedPartialFills.log
+  220  vi parsedPartialFills.log
+  221  cp parsedPartialFills.log /home/ubuntu/.module10.csv
+  222  cp cancels.log cancels2.log
+  223  vi cancels2.log
+  224  diff cancels.log cancels2.log
+  225  history
+
+
+
+
+

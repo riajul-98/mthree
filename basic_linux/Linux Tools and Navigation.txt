@@ -1,0 +1,89 @@
+ubuntu@ip-172-31-13-24:~$ uname -a
+Linux ip-172-31-13-24 6.8.0-1009-aws #9-Ubuntu SMP Fri May 17 14:39:23 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+
+ubuntu@ip-172-31-13-24:~$ pwd
+/home/ubuntu
+
+ubuntu@ip-172-31-13-24:~$ cd ..
+
+ubuntu@ip-172-31-13-24:/home$ pwd
+/home
+
+ubuntu@ip-172-31-13-24:/home$ ls -l
+total 4
+drwxr-x--- 5 ubuntu ubuntu 4096 Aug  6 12:37 ubuntu
+
+ubuntu@ip-172-31-13-24:/home$ ls -ltr
+total 4
+drwxr-x--- 5 ubuntu ubuntu 4096 Aug  6 12:37 ubuntu
+
+ubuntu@ip-172-31-13-24:/home$ cd /
+
+ubuntu@ip-172-31-13-24:/$ pwd
+/
+
+ubuntu@ip-172-31-13-24:/$ ls -ltr
+total 76
+drwxr-xr-x   2 root root  4096 Feb 26 12:58 bin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Mar 31 09:00 sbin.usr-is-merged
+drwxr-xr-x   2 root root  4096 Apr  8 14:37 lib.usr-is-merged
+lrwxrwxrwx   1 root root     8 Apr 22 13:08 sbin -> usr/sbin
+lrwxrwxrwx   1 root root     9 Apr 22 13:08 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root     7 Apr 22 13:08 lib -> usr/lib
+lrwxrwxrwx   1 root root     7 Apr 22 13:08 bin -> usr/bin
+drwxr-xr-x   2 root root  4096 Jul  1 16:00 srv
+drwxr-xr-x   2 root root  4096 Jul  1 16:00 mnt
+drwxr-xr-x   2 root root  4096 Jul  1 16:00 opt
+drwxr-xr-x   2 root root  4096 Jul  1 16:00 media
+drwxr-xr-x  12 root root  4096 Jul  1 16:00 usr
+drwx------   2 root root 16384 Jul  1 16:03 lost+found
+drwxr-xr-x   6 root root  4096 Jul  1 16:05 snap
+dr-xr-xr-x 181 root root     0 Aug  1 13:18 proc
+dr-xr-xr-x  13 root root     0 Aug  1 13:18 sys
+drwxr-xr-x  16 root root  3240 Aug  1 13:19 dev
+drwxr-xr-x  14 root root  4096 Aug  5 08:42 var
+drwxr-xr-x   3 root root  4096 Aug  8 11:49 home
+drwx------   8 root root  4096 Aug  9 17:25 root
+drwxr-xr-x 111 root root  4096 Aug 10 06:58 etc
+drwxr-xr-x   5 root root  4096 Aug 10 06:58 boot
+drwxrwxrwt  13 root root  4096 Aug 11 14:26 tmp
+drwxr-xr-x  31 root root  1160 Aug 11 14:28 run
+
+ubuntu@ip-172-31-13-24:/$ cd ~
+
+ubuntu@ip-172-31-13-24:~$ ls -ltra
+total 132
+-rw-r--r-- 1 ubuntu ubuntu   807 Mar 31 08:41 .profile
+-rw-r--r-- 1 ubuntu ubuntu  3771 Mar 31 08:41 .bashrc
+-rw-r--r-- 1 ubuntu ubuntu   220 Mar 31 08:41 .bash_logout
+-rwxr-xr-x 1 root   root    7350 Jul  1 22:57 fixGenerator.sh
+drwx------ 2 ubuntu ubuntu  4096 Aug  1 13:19 .ssh
+drwx------ 2 ubuntu ubuntu  4096 Aug  1 13:19 .cache
+-rw-r--r-- 1 ubuntu ubuntu     0 Aug  1 13:19 .sudo_as_admin_successful
+-rw-rw-r-- 1 ubuntu ubuntu    59 Aug  2 09:02 .gitconfig
+-rw------- 1 ubuntu ubuntu    20 Aug  2 09:02 .lesshst
+drwxr-xr-x 3 root   root    4096 Aug  2 09:03 SRErepo
+-rw-rw-r-- 1 ubuntu ubuntu  1057 Aug  6 11:34 avengers
+-rw-rw-r-- 1 ubuntu ubuntu 54786 Aug  6 11:48 fixlog20240806114509.log
+-rw-rw-r-- 1 ubuntu ubuntu  6136 Aug  6 12:37 newOrders.log
+-rw------- 1 ubuntu ubuntu  9154 Aug  6 12:37 .viminfo
+drwxr-x--- 5 ubuntu ubuntu  4096 Aug  6 12:37 .
+drwxr-xr-x 3 root   root    4096 Aug  8 11:49 ..
+-rw------- 1 ubuntu ubuntu  1207 Aug  9 23:39 .bash_history
+
+ubuntu@ip-172-31-13-24:~$ history
+   93  uname -a
+   94  pwd
+   95  cd ..
+   96  pwd
+   97  ls -l
+   98  ls -ltr
+   99  cd /
+  100  pwd
+  101  ls -ltr
+  102  cd ~
+  103  ls -ltra
+  104  history
+
+
+

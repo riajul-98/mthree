@@ -1,0 +1,21 @@
+ 256  sleep 60
+  257  sleep 200 &
+  258  jobs
+  259  sleep 50
+  260  jobs
+  261  bg
+  262  sleep 100
+  263  sleep 200
+  264  sleep 300
+  265  jobs
+  266  bg 2
+  267  bg 4
+  268  bg 3 5
+  269  kill %3
+  270  kill %4 %5
+  271  sleep 200 &
+  272  fg 6
+  273  screen
+  274  screen -r
+  275  screen -XS 193073 quit
+  276  history
