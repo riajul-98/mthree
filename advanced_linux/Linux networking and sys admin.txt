@@ -1,0 +1,67 @@
+ubuntu@ip-172-31-13-24:~$ sudo apt install stress -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+stress is already the newest version (1.0.7-1).
+0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
+ubuntu@ip-172-31-13-24:~$ free -mega
+free: invalid option -- 'e'
+
+Usage:
+ free [options]
+
+Options:
+ -b, --bytes         show output in bytes
+     --kilo          show output in kilobytes
+     --mega          show output in megabytes
+     --giga          show output in gigabytes
+     --tera          show output in terabytes
+     --peta          show output in petabytes
+ -k, --kibi          show output in kibibytes
+ -m, --mebi          show output in mebibytes
+ -g, --gibi          show output in gibibytes
+     --tebi          show output in tebibytes
+     --pebi          show output in pebibytes
+ -h, --human         show human-readable output
+     --si            use powers of 1000 not 1024
+ -l, --lohi          show detailed low and high memory statistics
+ -L, --line          show output on a single line
+ -t, --total         show total for RAM + swap
+ -v, --committed     show committed memory and commit limit
+ -s N, --seconds N   repeat printing every N seconds
+ -c N, --count N     repeat printing N times, then exit
+ -w, --wide          wide output
+
+     --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see free(1).
+ubuntu@ip-172-31-13-24:~$ free --mega
+               total        used        free      shared  buff/cache   available
+Mem:            1003         430         200           0         561         573
+Swap:              0           0           0
+ubuntu@ip-172-31-13-24:~$ free --mega | awk 'NR==2 {print $4}' > free_mega_before_stress
+ubuntu@ip-172-31-13-24:~$ stress --vm 1 --vm-bytes 512M --vm-keep -t 300s &
+[1] 164952
+ubuntu@ip-172-31-13-24:~$ stress: info: [164952] dispatching hogs: 0 cpu, 0 io, 1 vm, 0 hdd
+^C
+ubuntu@ip-172-31-13-24:~$ stress --vm 1 --vm-bytes 512M --vm-keep -t 300s &
+[2] 164967
+ubuntu@ip-172-31-13-24:~$ stress: info: [164967] dispatching hogs: 0 cpu, 0 io, 1 vm, 0 hdd
+stress: FAIL: [164952] (425) <-- worker 164953 got signal 9
+stress: WARN: [164952] (427) now reaping child worker processes
+stress: FAIL: [164952] (461) failed run completed in 34s
+
+[1]-  Exit 1                  stress --vm 1 --vm-bytes 512M --vm-keep -t 300s
+ubuntu@ip-172-31-13-24:~$ free --mega | awk 'NR==2 {print $4}' > free_mega_during_stress
+ubuntu@ip-172-31-13-24:~$ ps -eo pid,%mem,%cpu,cmd --sort=-%mem | head -n 6
+    PID %MEM %CPU CMD
+ 164968 53.5 98.3 stress --vm 1 --vm-bytes 512M --vm-keep -t 300s
+ 108610  2.8  0.0 /usr/bin/python3 /usr/sbin/firewalld --nofork --nopid
+  67316  2.7  0.0 /sbin/multipathd -d -s
+    589  1.3  0.0 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+   8859  1.3  0.0 /usr/lib/snapd/snapd
+ubuntu@ip-172-31-13-24:~$ bc <<< "$(cat free_mega_before_stress) - $(cat free_mega_during_stress)"
+8
+ubuntu@ip-172-31-13-24:~$
+
