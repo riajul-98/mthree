@@ -1,0 +1,519 @@
+[root@ip-172-31-22-158 ~]# sudo yum update
+Last metadata expiration check: 0:00:19 ago on Mon Aug 12 10:36:43 2024.
+Dependencies resolved.
+Nothing to do.
+Complete!
+[root@ip-172-31-22-158 ~]# sudo yum install httpd -y
+Last metadata expiration check: 0:00:29 ago on Mon Aug 12 10:36:43 2024.
+Dependencies resolved.
+===============================================================================================================================================================================================================================================================================
+ Package                                                               Architecture                                             Version                                                                    Repository                                                     Size
+===============================================================================================================================================================================================================================================================================
+Installing:
+ httpd                                                                 x86_64                                                   2.4.62-1.amzn2023                                                          amazonlinux                                                    48 k
+Installing dependencies:
+ apr                                                                   x86_64                                                   1.7.2-2.amzn2023.0.2                                                       amazonlinux                                                   129 k
+ apr-util                                                              x86_64                                                   1.6.3-1.amzn2023.0.1                                                       amazonlinux                                                    98 k
+ generic-logos-httpd                                                   noarch                                                   18.0.0-12.amzn2023.0.3                                                     amazonlinux                                                    19 k
+ httpd-core                                                            x86_64                                                   2.4.62-1.amzn2023                                                          amazonlinux                                                   1.4 M
+ httpd-filesystem                                                      noarch                                                   2.4.62-1.amzn2023                                                          amazonlinux                                                    14 k
+ httpd-tools                                                           x86_64                                                   2.4.62-1.amzn2023                                                          amazonlinux                                                    81 k
+ libbrotli                                                             x86_64                                                   1.0.9-4.amzn2023.0.2                                                       amazonlinux                                                   315 k
+ mailcap                                                               noarch                                                   2.1.49-3.amzn2023.0.3                                                      amazonlinux                                                    33 k
+Installing weak dependencies:
+ apr-util-openssl                                                      x86_64                                                   1.6.3-1.amzn2023.0.1                                                       amazonlinux                                                    17 k
+ mod_http2                                                             x86_64                                                   2.0.27-1.amzn2023.0.3                                                      amazonlinux                                                   166 k
+ mod_lua                                                               x86_64                                                   2.4.62-1.amzn2023                                                          amazonlinux                                                    61 k
+
+Transaction Summary
+===============================================================================================================================================================================================================================================================================
+Install  12 Packages
+
+Total download size: 2.3 M
+Installed size: 6.9 M
+Downloading Packages:
+(1/12): apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                                                                                                                                       264 kB/s |  17 kB     00:00
+(2/12): apr-util-1.6.3-1.amzn2023.0.1.x86_64.rpm                                                                                                                                                                                               1.4 MB/s |  98 kB     00:00
+(3/12): apr-1.7.2-2.amzn2023.0.2.x86_64.rpm                                                                                                                                                                                                    1.7 MB/s | 129 kB     00:00
+(4/12): httpd-2.4.62-1.amzn2023.x86_64.rpm                                                                                                                                                                                                     3.3 MB/s |  48 kB     00:00
+(5/12): generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch.rpm                                                                                                                                                                                  924 kB/s |  19 kB     00:00
+(6/12): httpd-filesystem-2.4.62-1.amzn2023.noarch.rpm                                                                                                                                                                                          780 kB/s |  14 kB     00:00
+(7/12): httpd-core-2.4.62-1.amzn2023.x86_64.rpm                                                                                                                                                                                                 35 MB/s | 1.4 MB     00:00
+(8/12): httpd-tools-2.4.62-1.amzn2023.x86_64.rpm                                                                                                                                                                                               2.2 MB/s |  81 kB     00:00
+(9/12): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                                                                                                                                                               10 MB/s | 315 kB     00:00
+(10/12): mailcap-2.1.49-3.amzn2023.0.3.noarch.rpm                                                                                                                                                                                              1.7 MB/s |  33 kB     00:00
+(11/12): mod_http2-2.0.27-1.amzn2023.0.3.x86_64.rpm                                                                                                                                                                                            6.4 MB/s | 166 kB     00:00
+(12/12): mod_lua-2.4.62-1.amzn2023.x86_64.rpm                                                                                                                                                                                                  3.5 MB/s |  61 kB     00:00
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                           11 MB/s | 2.3 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                                                       1/1
+  Installing       : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                                                                                                                                      1/12
+  Installing       : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                                                                                                                                         2/12
+  Installing       : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                                                                                                                                 3/12
+  Installing       : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                                                                                                                                 4/12
+  Installing       : httpd-tools-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                 5/12
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                                                                                                                                6/12
+  Running scriptlet: httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                                                                                                                                            7/12
+  Installing       : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                                                                                                                                            7/12
+  Installing       : httpd-core-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                  8/12
+  Installing       : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                                                                                                                                               9/12
+  Installing       : mod_lua-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                    10/12
+  Installing       : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                                                                                                                                   11/12
+  Installing       : httpd-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                      12/12
+  Running scriptlet: httpd-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                      12/12
+  Verifying        : apr-1.7.2-2.amzn2023.0.2.x86_64                                                                                                                                                                                                                      1/12
+  Verifying        : apr-util-1.6.3-1.amzn2023.0.1.x86_64                                                                                                                                                                                                                 2/12
+  Verifying        : apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64                                                                                                                                                                                                         3/12
+  Verifying        : generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch                                                                                                                                                                                                    4/12
+  Verifying        : httpd-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                       5/12
+  Verifying        : httpd-core-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                  6/12
+  Verifying        : httpd-filesystem-2.4.62-1.amzn2023.noarch                                                                                                                                                                                                            7/12
+  Verifying        : httpd-tools-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                 8/12
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                                                                                                                                                9/12
+  Verifying        : mailcap-2.1.49-3.amzn2023.0.3.noarch                                                                                                                                                                                                                10/12
+  Verifying        : mod_http2-2.0.27-1.amzn2023.0.3.x86_64                                                                                                                                                                                                              11/12
+  Verifying        : mod_lua-2.4.62-1.amzn2023.x86_64                                                                                                                                                                                                                    12/12
+
+Installed:
+  apr-1.7.2-2.amzn2023.0.2.x86_64              apr-util-1.6.3-1.amzn2023.0.1.x86_64    apr-util-openssl-1.6.3-1.amzn2023.0.1.x86_64    generic-logos-httpd-18.0.0-12.amzn2023.0.3.noarch    httpd-2.4.62-1.amzn2023.x86_64            httpd-core-2.4.62-1.amzn2023.x86_64
+  httpd-filesystem-2.4.62-1.amzn2023.noarch    httpd-tools-2.4.62-1.amzn2023.x86_64    libbrotli-1.0.9-4.amzn2023.0.2.x86_64           mailcap-2.1.49-3.amzn2023.0.3.noarch                 mod_http2-2.0.27-1.amzn2023.0.3.x86_64    mod_lua-2.4.62-1.amzn2023.x86_64
+
+Complete!
+[root@ip-172-31-22-158 ~]# systemctl start httpd
+[root@ip-172-31-22-158 ~]# systemctl enable httpd
+Created symlink /etc/systemd/system/multi-user.target.wants/httpd.service → /usr/lib/systemd/system/httpd.service.
+[root@ip-172-31-22-158 ~]# systemctl status httpd
+● httpd.service - The Apache HTTP Server
+     Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; preset: disabled)
+     Active: active (running) since Mon 2024-08-12 10:37:53 UTC; 49s ago
+       Docs: man:httpd.service(8)
+   Main PID: 25574 (httpd)
+     Status: "Total requests: 0; Idle/Busy workers 100/0;Requests/sec: 0; Bytes served/sec:   0 B/sec"
+      Tasks: 177 (limit: 1112)
+     Memory: 12.9M
+        CPU: 93ms
+     CGroup: /system.slice/httpd.service
+             ├─25574 /usr/sbin/httpd -DFOREGROUND
+             ├─25597 /usr/sbin/httpd -DFOREGROUND
+             ├─25598 /usr/sbin/httpd -DFOREGROUND
+             ├─25599 /usr/sbin/httpd -DFOREGROUND
+             └─25600 /usr/sbin/httpd -DFOREGROUND
+
+Aug 12 10:37:53 ip-172-31-22-158.eu-west-1.compute.internal systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Aug 12 10:37:53 ip-172-31-22-158.eu-west-1.compute.internal systemd[1]: Started httpd.service - The Apache HTTP Server.
+Aug 12 10:37:53 ip-172-31-22-158.eu-west-1.compute.internal httpd[25574]: Server configured, listening on: port 80
+[root@ip-172-31-22-158 ~]# dig TXT +short o-o.myaddr.l.google.com @ns1.google.com
+"176.34.197.169"
+[root@ip-172-31-22-158 ~]# sudo netstat -lpn | grep -i 'listen\b'
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2206/sshd: /usr/sbi
+tcp6       0      0 :::22                   :::*                    LISTEN      2206/sshd: /usr/sbi
+tcp6       0      0 :::80                   :::*                    LISTEN      25574/httpd
+[root@ip-172-31-22-158 ~]# sudo systemctl stop httpd
+[root@ip-172-31-22-158 ~]# sudo netstat -lpn | grep -i 'listen\b'
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      2206/sshd: /usr/sbi
+tcp6       0      0 :::22                   :::*                    LISTEN      2206/sshd: /usr/sbi
+[root@ip-172-31-22-158 ~]# sudo systemctl start httpd
+[root@ip-172-31-22-158 ~]# sudo netstat -ntcp
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    308 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:38850     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+qActive Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:33906     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 172.31.22.158:33906     169.254.169.254:80      TIME_WAIT   -
+tcp        0    224 172.31.22.158:22        86.177.125.60:64419     ESTABLISHED 2280/sshd: ec2-user
+^C
+[root@ip-172-31-22-158 ~]# ps -efH
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           2       0  0 10:36 ?        00:00:00 [kthreadd]
+root           3       2  0 10:36 ?        00:00:00   [rcu_gp]
+root           4       2  0 10:36 ?        00:00:00   [rcu_par_gp]
+root           5       2  0 10:36 ?        00:00:00   [slub_flushwq]
+root           6       2  0 10:36 ?        00:00:00   [netns]
+root           8       2  0 10:36 ?        00:00:00   [kworker/0:0H-events_highpri]
+root          10       2  0 10:36 ?        00:00:00   [mm_percpu_wq]
+root          11       2  0 10:36 ?        00:00:00   [rcu_tasks_kthread]
+root          12       2  0 10:36 ?        00:00:00   [rcu_tasks_rude_kthread]
+root          13       2  0 10:36 ?        00:00:00   [rcu_tasks_trace_kthread]
+root          14       2  0 10:36 ?        00:00:00   [ksoftirqd/0]
+root          15       2  0 10:36 ?        00:00:00   [rcu_preempt]
+root          16       2  0 10:36 ?        00:00:00   [migration/0]
+root          18       2  0 10:36 ?        00:00:00   [cpuhp/0]
+root          20       2  0 10:36 ?        00:00:00   [kdevtmpfs]
+root          21       2  0 10:36 ?        00:00:00   [inet_frag_wq]
+root          22       2  0 10:36 ?        00:00:00   [kauditd]
+root          23       2  0 10:36 ?        00:00:00   [khungtaskd]
+root          24       2  0 10:36 ?        00:00:00   [oom_reaper]
+root          25       2  0 10:36 ?        00:00:00   [kworker/u30:1-events_unbound]
+root          27       2  0 10:36 ?        00:00:00   [writeback]
+root          28       2  0 10:36 ?        00:00:00   [kcompactd0]
+root          29       2  0 10:36 ?        00:00:00   [khugepaged]
+root          30       2  0 10:36 ?        00:00:00   [kintegrityd]
+root          31       2  0 10:36 ?        00:00:00   [kblockd]
+root          32       2  0 10:36 ?        00:00:00   [blkcg_punt_bio]
+root          33       2  0 10:36 ?        00:00:00   [xen-balloon]
+root          34       2  0 10:36 ?        00:00:00   [tpm_dev_wq]
+root          35       2  0 10:36 ?        00:00:00   [md]
+root          36       2  0 10:36 ?        00:00:00   [edac-poller]
+root          37       2  0 10:36 ?        00:00:00   [watchdogd]
+root          38       2  0 10:36 ?        00:00:00   [kworker/0:1H-kblockd]
+root          72       2  0 10:36 ?        00:00:00   [kswapd0]
+root          75       2  0 10:36 ?        00:00:00   [xfsalloc]
+root          76       2  0 10:36 ?        00:00:00   [xfs_mru_cache]
+root          79       2  0 10:36 ?        00:00:00   [kthrotld]
+root          82       2  0 10:36 ?        00:00:00   [kworker/0:2-events_power_efficient]
+root          94       2  0 10:36 ?        00:00:00   [xenbus]
+root          95       2  0 10:36 ?        00:00:00   [xenwatch]
+root         133       2  0 10:36 ?        00:00:00   [nvme-wq]
+root         135       2  0 10:36 ?        00:00:00   [nvme-reset-wq]
+root         137       2  0 10:36 ?        00:00:00   [nvme-delete-wq]
+root         161       2  0 10:36 ?        00:00:00   [mld]
+root         162       2  0 10:36 ?        00:00:00   [ipv6_addrconf]
+root         172       2  0 10:36 ?        00:00:00   [kstrp]
+root         184       2  0 10:36 ?        00:00:00   [zswap-shrink]
+root         185       2  0 10:36 ?        00:00:00   [kworker/u31:0]
+root         980       2  0 10:36 ?        00:00:00   [xfs-buf/xvda1]
+root         981       2  0 10:36 ?        00:00:00   [xfs-conv/xvda1]
+root         982       2  0 10:36 ?        00:00:00   [xfs-reclaim/xvd]
+root         983       2  0 10:36 ?        00:00:00   [xfs-blockgc/xvd]
+root         984       2  0 10:36 ?        00:00:00   [xfs-inodegc/xvd]
+root         985       2  0 10:36 ?        00:00:00   [xfs-log/xvda1]
+root         986       2  0 10:36 ?        00:00:00   [xfs-cil/xvda1]
+root         987       2  0 10:36 ?        00:00:00   [xfsaild/xvda1]
+root        1054       2  0 10:36 ?        00:00:00   [kworker/u30:4-events_unbound]
+root        1843       2  0 10:36 ?        00:00:00   [cryptd]
+root        1846       2  0 10:36 ?        00:00:00   [rpciod]
+root        1850       2  0 10:36 ?        00:00:00   [xprtiod]
+root        1866       2  0 10:36 ?        00:00:00   [ata_sff]
+root        1882       2  0 10:36 ?        00:00:00   [scsi_eh_0]
+root        1884       2  0 10:36 ?        00:00:00   [scsi_tmf_0]
+root        1889       2  0 10:36 ?        00:00:00   [scsi_eh_1]
+root        1890       2  0 10:36 ?        00:00:00   [scsi_tmf_1]
+root       26274       2  0 10:43 ?        00:00:00   [kworker/0:0-cgroup_destroy]
+root           1       0  0 10:36 ?        00:00:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root        1041       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-journald
+root        1709       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-udevd
+systemd+    1714       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-resolved
+root        1729       1  0 10:36 ?        00:00:00   /sbin/auditd
+root        1956       1  0 10:36 ?        00:00:00   /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=noah --why=acpid instead --mode=block /usr/sbin/acpid -f
+root        1990    1956  0 10:36 ?        00:00:00     /usr/sbin/acpid -f
+libstor+    1958       1  0 10:36 ?        00:00:00   /usr/bin/lsmd -d
+root        1960       1  1 10:36 ?        00:00:12   /usr/sbin/rngd -f -x pkcs11 -x nist
+root        1962       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-homed
+root        1963       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-logind
+dbus        1964       1  0 10:36 ?        00:00:00   /usr/bin/dbus-broker-launch --scope system --audit
+dbus        1971    1964  0 10:36 ?        00:00:00     dbus-broker --log 4 --controller 9 --machine-id ec27716398bf44f74d79f66863b5eb9c --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit
+systemd+    1965       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-networkd
+root        1993       1  0 10:36 ?        00:00:00   /usr/sbin/gssproxy -D
+root        2202       1  0 10:36 ?        00:00:00   /usr/bin/amazon-ssm-agent
+root        2206       1  0 10:36 ?        00:00:00   sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        2280    2206  0 10:36 ?        00:00:00     sshd: ec2-user [priv]
+ec2-user    2297    2280  0 10:36 ?        00:00:00       sshd: ec2-user@pts/0
+ec2-user    2298    2297  0 10:36 pts/0    00:00:00         -bash
+root        2335    2298  0 10:36 pts/0    00:00:00           sudo -i
+root        2338    2335  0 10:36 pts/1    00:00:00             sudo -i
+root        2340    2338  0 10:36 pts/1    00:00:00               -bash
+root       26464    2340  0 10:48 pts/1    00:00:00                 ps -efH
+root        2213       1  0 10:36 ?        00:00:00   /usr/sbin/atd -f
+root        2217       1  0 10:36 tty1     00:00:00   /sbin/agetty -o -p -- \u --noclear - linux
+root        2218       1  0 10:36 ttyS0    00:00:00   /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+chrony      2235       1  0 10:36 ?        00:00:00   /usr/sbin/chronyd -F 2
+root        2283       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd-userdbd
+root       26413    2283  0 10:46 ?        00:00:00     systemd-userwork: waiting...
+root       26416    2283  0 10:47 ?        00:00:00     systemd-userwork: waiting...
+root       26417    2283  0 10:47 ?        00:00:00     systemd-userwork: waiting...
+ec2-user    2288       1  0 10:36 ?        00:00:00   /usr/lib/systemd/systemd --user
+ec2-user    2290    2288  0 10:36 ?        00:00:00     (sd-pam)
+root       26044       1  0 10:42 ?        00:00:00   /usr/sbin/httpd -DFOREGROUND
+apache     26045   26044  0 10:42 ?        00:00:00     /usr/sbin/httpd -DFOREGROUND
+apache     26046   26044  0 10:42 ?        00:00:00     /usr/sbin/httpd -DFOREGROUND
+apache     26047   26044  0 10:42 ?        00:00:00     /usr/sbin/httpd -DFOREGROUND
+apache     26048   26044  0 10:42 ?        00:00:00     /usr/sbin/httpd -DFOREGROUND
+[root@ip-172-31-22-158 ~]# ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 10:36 ?        00:00:01 /usr/lib/systemd/systemd --switched-root --system --deserialize=32
+root           2       0  0 10:36 ?        00:00:00 [kthreadd]
+root           3       2  0 10:36 ?        00:00:00 [rcu_gp]
+root           4       2  0 10:36 ?        00:00:00 [rcu_par_gp]
+root           5       2  0 10:36 ?        00:00:00 [slub_flushwq]
+root           6       2  0 10:36 ?        00:00:00 [netns]
+root           8       2  0 10:36 ?        00:00:00 [kworker/0:0H-events_highpri]
+root          10       2  0 10:36 ?        00:00:00 [mm_percpu_wq]
+root          11       2  0 10:36 ?        00:00:00 [rcu_tasks_kthread]
+root          12       2  0 10:36 ?        00:00:00 [rcu_tasks_rude_kthread]
+root          13       2  0 10:36 ?        00:00:00 [rcu_tasks_trace_kthread]
+root          14       2  0 10:36 ?        00:00:00 [ksoftirqd/0]
+root          15       2  0 10:36 ?        00:00:00 [rcu_preempt]
+root          16       2  0 10:36 ?        00:00:00 [migration/0]
+root          18       2  0 10:36 ?        00:00:00 [cpuhp/0]
+root          20       2  0 10:36 ?        00:00:00 [kdevtmpfs]
+root          21       2  0 10:36 ?        00:00:00 [inet_frag_wq]
+root          22       2  0 10:36 ?        00:00:00 [kauditd]
+root          23       2  0 10:36 ?        00:00:00 [khungtaskd]
+root          24       2  0 10:36 ?        00:00:00 [oom_reaper]
+root          25       2  0 10:36 ?        00:00:00 [kworker/u30:1-events_unbound]
+root          27       2  0 10:36 ?        00:00:00 [writeback]
+root          28       2  0 10:36 ?        00:00:00 [kcompactd0]
+root          29       2  0 10:36 ?        00:00:00 [khugepaged]
+root          30       2  0 10:36 ?        00:00:00 [kintegrityd]
+root          31       2  0 10:36 ?        00:00:00 [kblockd]
+root          32       2  0 10:36 ?        00:00:00 [blkcg_punt_bio]
+root          33       2  0 10:36 ?        00:00:00 [xen-balloon]
+root          34       2  0 10:36 ?        00:00:00 [tpm_dev_wq]
+root          35       2  0 10:36 ?        00:00:00 [md]
+root          36       2  0 10:36 ?        00:00:00 [edac-poller]
+root          37       2  0 10:36 ?        00:00:00 [watchdogd]
+root          38       2  0 10:36 ?        00:00:00 [kworker/0:1H-kblockd]
+root          72       2  0 10:36 ?        00:00:00 [kswapd0]
+root          75       2  0 10:36 ?        00:00:00 [xfsalloc]
+root          76       2  0 10:36 ?        00:00:00 [xfs_mru_cache]
+root          79       2  0 10:36 ?        00:00:00 [kthrotld]
+root          82       2  0 10:36 ?        00:00:00 [kworker/0:2-events]
+root          94       2  0 10:36 ?        00:00:00 [xenbus]
+root          95       2  0 10:36 ?        00:00:00 [xenwatch]
+root         133       2  0 10:36 ?        00:00:00 [nvme-wq]
+root         135       2  0 10:36 ?        00:00:00 [nvme-reset-wq]
+root         137       2  0 10:36 ?        00:00:00 [nvme-delete-wq]
+root         161       2  0 10:36 ?        00:00:00 [mld]
+root         162       2  0 10:36 ?        00:00:00 [ipv6_addrconf]
+root         172       2  0 10:36 ?        00:00:00 [kstrp]
+root         184       2  0 10:36 ?        00:00:00 [zswap-shrink]
+root         185       2  0 10:36 ?        00:00:00 [kworker/u31:0]
+root         980       2  0 10:36 ?        00:00:00 [xfs-buf/xvda1]
+root         981       2  0 10:36 ?        00:00:00 [xfs-conv/xvda1]
+root         982       2  0 10:36 ?        00:00:00 [xfs-reclaim/xvd]
+root         983       2  0 10:36 ?        00:00:00 [xfs-blockgc/xvd]
+root         984       2  0 10:36 ?        00:00:00 [xfs-inodegc/xvd]
+root         985       2  0 10:36 ?        00:00:00 [xfs-log/xvda1]
+root         986       2  0 10:36 ?        00:00:00 [xfs-cil/xvda1]
+root         987       2  0 10:36 ?        00:00:00 [xfsaild/xvda1]
+root        1041       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-journald
+root        1054       2  0 10:36 ?        00:00:00 [kworker/u30:4-events_unbound]
+root        1709       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+systemd+    1714       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+root        1729       1  0 10:36 ?        00:00:00 /sbin/auditd
+root        1843       2  0 10:36 ?        00:00:00 [cryptd]
+root        1846       2  0 10:36 ?        00:00:00 [rpciod]
+root        1850       2  0 10:36 ?        00:00:00 [xprtiod]
+root        1866       2  0 10:36 ?        00:00:00 [ata_sff]
+root        1882       2  0 10:36 ?        00:00:00 [scsi_eh_0]
+root        1884       2  0 10:36 ?        00:00:00 [scsi_tmf_0]
+root        1889       2  0 10:36 ?        00:00:00 [scsi_eh_1]
+root        1890       2  0 10:36 ?        00:00:00 [scsi_tmf_1]
+root        1956       1  0 10:36 ?        00:00:00 /usr/bin/systemd-inhibit --what=handle-suspend-key:handle-hibernate-key --who=noah --why=acpid instead --mode=block /usr/sbin/acpid -f
+libstor+    1958       1  0 10:36 ?        00:00:00 /usr/bin/lsmd -d
+root        1960       1  1 10:36 ?        00:00:12 /usr/sbin/rngd -f -x pkcs11 -x nist
+root        1962       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-homed
+root        1963       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-logind
+dbus        1964       1  0 10:36 ?        00:00:00 /usr/bin/dbus-broker-launch --scope system --audit
+systemd+    1965       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-networkd
+dbus        1971    1964  0 10:36 ?        00:00:00 dbus-broker --log 4 --controller 9 --machine-id ec27716398bf44f74d79f66863b5eb9c --max-bytes 536870912 --max-fds 4096 --max-matches 16384 --audit
+root        1990    1956  0 10:36 ?        00:00:00 /usr/sbin/acpid -f
+root        1993       1  0 10:36 ?        00:00:00 /usr/sbin/gssproxy -D
+root        2202       1  0 10:36 ?        00:00:00 /usr/bin/amazon-ssm-agent
+root        2206       1  0 10:36 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root        2213       1  0 10:36 ?        00:00:00 /usr/sbin/atd -f
+root        2217       1  0 10:36 tty1     00:00:00 /sbin/agetty -o -p -- \u --noclear - linux
+root        2218       1  0 10:36 ttyS0    00:00:00 /sbin/agetty -o -p -- \u --keep-baud 115200,57600,38400,9600 - vt220
+chrony      2235       1  0 10:36 ?        00:00:00 /usr/sbin/chronyd -F 2
+root        2280    2206  0 10:36 ?        00:00:00 sshd: ec2-user [priv]
+root        2283       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd-userdbd
+ec2-user    2288       1  0 10:36 ?        00:00:00 /usr/lib/systemd/systemd --user
+ec2-user    2290    2288  0 10:36 ?        00:00:00 (sd-pam)
+ec2-user    2297    2280  0 10:36 ?        00:00:00 sshd: ec2-user@pts/0
+ec2-user    2298    2297  0 10:36 pts/0    00:00:00 -bash
+root        2335    2298  0 10:36 pts/0    00:00:00 sudo -i
+root        2338    2335  0 10:36 pts/1    00:00:00 sudo -i
+root        2340    2338  0 10:36 pts/1    00:00:00 -bash
+root       26044       1  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26045   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26046   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26047   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26048   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+root       26274       2  0 10:43 ?        00:00:00 [kworker/0:0-cgroup_destroy]
+root       26413    2283  0 10:46 ?        00:00:00 systemd-userwork: waiting...
+root       26416    2283  0 10:47 ?        00:00:00 systemd-userwork: waiting...
+root       26417    2283  0 10:47 ?        00:00:00 systemd-userwork: waiting...
+root       26465    2340  0 10:48 pts/1    00:00:00 ps -ef
+[root@ip-172-31-22-158 ~]# ps -ef | grep httpd
+root       26044       1  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26045   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26046   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26047   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+apache     26048   26044  0 10:42 ?        00:00:00 /usr/sbin/httpd -DFOREGROUND
+root       26514    2340  0 10:49 pts/1    00:00:00 grep --color=auto httpd
+[root@ip-172-31-22-158 ~]# pgrep httpd
+26044
+26045
+26046
+26047
+26048
+[root@ip-172-31-22-158 ~]# ls -l /proc/26044/fd
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45031]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+lrwx------. 1 root root 64 Aug 12 10:42 8 -> 'socket:[45062]'
+[root@ip-172-31-22-158 ~]# pgrep httpd | sudo xargs -I {} sh -c 'echo "PID: {26044}"; ls -l /proc/{}/fd'
+PID: {26044}
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45031]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+lrwx------. 1 root root 64 Aug 12 10:42 8 -> 'socket:[45062]'
+PID: {26044}
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45070]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+PID: {26044}
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+lrwx------. 1 root root 64 Aug 12 10:42 10 -> 'anon_inode:[eventpoll]'
+lr-x------. 1 root root 64 Aug 12 10:42 11 -> 'pipe:[45077]'
+l-wx------. 1 root root 64 Aug 12 10:42 12 -> 'pipe:[45077]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45031]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+lrwx------. 1 root root 64 Aug 12 10:42 8 -> 'socket:[45062]'
+lrwx------. 1 root root 64 Aug 12 10:42 9 -> 'socket:[45076]'
+PID: {26044}
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+lrwx------. 1 root root 64 Aug 12 10:42 10 -> 'anon_inode:[eventpoll]'
+lr-x------. 1 root root 64 Aug 12 10:42 11 -> 'pipe:[45081]'
+l-wx------. 1 root root 64 Aug 12 10:42 12 -> 'pipe:[45081]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45031]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+lrwx------. 1 root root 64 Aug 12 10:42 8 -> 'socket:[45062]'
+lrwx------. 1 root root 64 Aug 12 10:42 9 -> 'socket:[45080]'
+PID: {26044}
+total 0
+lr-x------. 1 root root 64 Aug 12 10:42 0 -> /dev/null
+lrwx------. 1 root root 64 Aug 12 10:42 1 -> 'socket:[45012]'
+lrwx------. 1 root root 64 Aug 12 10:42 10 -> 'anon_inode:[eventpoll]'
+lr-x------. 1 root root 64 Aug 12 10:42 11 -> 'pipe:[45085]'
+l-wx------. 1 root root 64 Aug 12 10:42 12 -> 'pipe:[45085]'
+l-wx------. 1 root root 64 Aug 12 10:42 2 -> /var/log/httpd/error_log
+lrwx------. 1 root root 64 Aug 12 10:42 3 -> 'socket:[45030]'
+lrwx------. 1 root root 64 Aug 12 10:42 4 -> 'socket:[45031]'
+lr-x------. 1 root root 64 Aug 12 10:42 5 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 6 -> 'pipe:[45051]'
+l-wx------. 1 root root 64 Aug 12 10:42 7 -> /var/log/httpd/access_log
+lrwx------. 1 root root 64 Aug 12 10:42 8 -> 'socket:[45062]'
+lrwx------. 1 root root 64 Aug 12 10:42 9 -> 'socket:[45084]'
+[root@ip-172-31-22-158 ~]# sudo cat /var/log/httpd/access_log | awk '{print $1}'
+86.177.125.60
+86.177.125.60
+[root@ip-172-31-22-158 ~]# sudo cat /var/log/httpd/access_log | awk '/404/ {$(NF+1)=$1;print}' | awk -FGET '{print $2}' | awk '{print $1, $NF}' > 404.txt
+[root@ip-172-31-22-158 ~]# sudo cat /var/log/httpd/access_log | awk '/404/ {$(NF+1)=$1;print}' | awk -FGET '{print $2}' | awk '{print $1, $NF}' > 404.txt
+[root@ip-172-31-22-158 ~]# awk '{count[$1" "$2]++} END {for (key in count) print key, count[key]}' 404.txt | sort -k3,3nr > aggregated_404.txt
+[root@ip-172-31-22-158 ~]# less aggregated_404.txt
+[root@ip-172-31-22-158 ~]# cat 404.txt
+/favicon.ico 86.177.125.60
+[root@ip-172-31-22-158 ~]#
